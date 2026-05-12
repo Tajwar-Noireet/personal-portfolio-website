@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tajwar Matin — Creative Developer specializing in Web Development, UI/UX Design, and Data Analysis. Available for freelance and full-time opportunities.">
+    <title>Tajwar Matin — Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">TM</div>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="progress-text">0%</div>
+        </div>
+    </div>
+
+    <!-- Fixed Canvas Background -->
+    <div id="canvas-container">
+        <canvas id="avatar-canvas"></canvas>
+        <div class="canvas-vignette"></div>
+    </div>
+
+    <!-- Fixed Nav -->
+    <nav class="hero-nav" id="hero-nav">
+        <span class="hero-nav-name">Tajwar Matin</span>
+        <div class="hero-nav-links">
+            <a href="#bento-grid" id="nav-work">Work</a>
+            <a href="https://github.com/Tajwar-Noireet" target="_blank" rel="noopener noreferrer" id="nav-github">GitHub</a>
+            <a href="https://www.linkedin.com/in/md-tajwar-matin-a86128193" target="_blank" rel="noopener noreferrer" id="nav-linkedin">LinkedIn</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="hero-headline" class="hero-headline">
+            <div class="hero-tag">Available for Work</div>
+            <h1 class="hero-title">Creative<br>Developer.</h1>
+            <div class="hero-roles" id="hero-roles">
+                <span class="hero-role" id="role-0">Web Developer</span>
+                <span class="hero-role" id="role-1">Designer</span>
+                <span class="hero-role" id="role-2">Data Analyst</span>
+            </div>
+        </div>
+        <div class="scroll-cue">
+            <span>Scroll</span>
+            <div class="scroll-cue-line"></div>
+        </div>
+    </section>
+
+    <!-- Veo watermark cover — bottom-right corner -->
+    <a href="https://github.com/Tajwar-Noireet" target="_blank" rel="noopener noreferrer"
+       id="veo-cover" class="veo-cover" aria-label="View GitHub profile">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+    </a>
+
+    <main id="scroll-content">
+        <section id="bento-grid" class="bento-container">
+
+            <!-- Row 1: Three Role Cards -->
+            <div class="bento-card role-card fade-up" id="card-webdev">
+                <div class="role-icon">🌐</div>
+                <h3 class="role-title">Web Development</h3>
+                <p class="role-desc">Building fast, scalable web applications with clean architecture. Proficient in HTML, CSS, JavaScript, React, and backend integrations.</p>
+                <div class="role-tags">
+                    <span>React</span><span>JavaScript</span><span>Supabase</span><span>REST APIs</span>
+                </div>
+            </div>
+
+            <div class="bento-card role-card fade-up" id="card-design">
+                <div class="role-icon">✦</div>
+                <h3 class="role-title">UI/UX Design</h3>
+                <p class="role-desc">Crafting pixel-perfect interfaces and memorable user experiences. From wireframes and design systems to production-ready assets.</p>
+                <div class="role-tags">
+                    <span>Figma</span><span>Blender</span><span>Canva</span><span>Prototyping</span>
+                </div>
+            </div>
+
+            <div class="bento-card role-card fade-up" id="card-data">
+                <div class="role-icon">📊</div>
+                <h3 class="role-title">Data Analysis</h3>
+                <p class="role-desc">Transforming raw datasets into meaningful visual stories. Leveraging tools to surface insights that drive real decisions.</p>
+                <div class="role-tags">
+                    <span>Python</span><span>SQL</span><span>D3.js</span><span>Dashboards</span>
+                </div>
+            </div>
+
+            <!-- Row 2: About + Stats -->
+            <div class="bento-card about-card bento-col2 fade-up" id="card-about">
+                <div class="card-content">
+                    <h3 class="card-title">Built different.</h3>
+                    <p class="about-body">I'm Tajwar — a multi-disciplinary technologist who sits at the intersection of engineering, design, and data. I don't just build things that work; I build things that feel inevitable. Every interface I craft is a deliberate decision, every dataset I touch tells a story, and every line of code I write serves a purpose larger than its syntax.</p>
+                    <a href="https://www.linkedin.com/in/md-tajwar-matin-a86128193" target="_blank" rel="noopener noreferrer" class="apple-link" style="margin-top:1.5rem;display:inline-block;" id="about-linkedin">Connect on LinkedIn &gt;</a>
+                </div>
+            </div>
+
+            <div class="bento-card stats-card bento-col1 fade-up" id="card-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects Shipped</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Core Disciplines</span>
+                </div>
+            </div>
+
+            <!-- Row 3: Full-width Skills -->
+            <div class="bento-card bento-wide fade-up" id="card-skills">
+                <div class="card-content">
+                    <h3 class="card-title">Full Stack.</h3>
+                    <p class="card-subtitle">Every tool, chosen with intention.</p>
+                    <div class="specs-grid specs-grid-large">
+                        <div class="spec-item"><span class="spec-icon">🎨</span><span class="spec-name">Figma</span></div>
+                        <div class="spec-item"><span class="spec-icon">💠</span><span class="spec-name">Blender</span></div>
+                        <div class="spec-item"><span class="spec-icon">⚡</span><span class="spec-name">Supabase</span></div>
+                        <div class="spec-item"><span class="spec-icon">⚛️</span><span class="spec-name">React</span></div>
+                        <div class="spec-item"><span class="spec-icon">🐍</span><span class="spec-name">Python</span></div>
+                        <div class="spec-item"><span class="spec-icon">🗄️</span><span class="spec-name">SQL</span></div>
+                        <div class="spec-item"><span class="spec-icon">📈</span><span class="spec-name">D3.js</span></div>
+                        <div class="spec-item"><span class="spec-icon">💻</span><span class="spec-name">VS Code</span></div>
+                        <div class="spec-item"><span class="spec-icon">🏗️</span><span class="spec-name">Antigravity</span></div>
+                        <div class="spec-item"><span class="spec-icon">📝</span><span class="spec-name">Notion</span></div>
+                        <div class="spec-item"><span class="spec-icon">🎬</span><span class="spec-name">Canva</span></div>
+                        <div class="spec-item"><span class="spec-icon">🌐</span><span class="spec-name">REST APIs</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Projects -->
+            <div class="bento-card project-card fade-up" id="card-proj1">
+                <div class="project-image" style="background-image: url('images/project1.png');"></div>
+                <div class="project-content">
+                    <div class="project-discipline">Web Dev · Data</div>
+                    <h4 class="project-title">Aura Platform</h4>
+                    <p class="project-desc">WebGL · Supabase · D3.js</p>
+                    <a href="#" class="apple-link" id="proj1-link">Learn more &gt;</a>
+                </div>
+            </div>
+
+            <div class="bento-card project-card fade-up" id="card-proj2">
+                <div class="project-image" style="background-image: url('images/project2.png');"></div>
+                <div class="project-content">
+                    <div class="project-discipline">Design · Dev</div>
+                    <h4 class="project-title">Nexus Dashboard</h4>
+                    <p class="project-desc">React · D3.js · Figma</p>
+                    <a href="#" class="apple-link" id="proj2-link">Learn more &gt;</a>
+                </div>
+            </div>
+
+            <!-- Row 5: CTA -->
+            <div class="bento-card bento-wide cta-card fade-up" id="card-cta">
+                <div class="card-content centered-content">
+                    <h3 class="card-title">Let's build something extraordinary.</h3>
+                    <p class="card-subtitle">Open to freelance, collaborations, and full-time roles.</p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/Tajwar-Noireet" target="_blank" rel="noopener noreferrer" class="cta-btn-primary" id="cta-github">View GitHub &gt;</a>
+                        <a href="https://www.linkedin.com/in/md-tajwar-matin-a86128193" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary" id="cta-linkedin">LinkedIn &gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="bento-card bento-wide footer-card fade-up" id="card-footer">
+                <div class="footer-links">
+                    <a href="https://github.com/Tajwar-Noireet" target="_blank" rel="noopener noreferrer" id="footer-github">GitHub</a>
+                    <a href="https://www.linkedin.com/in/md-tajwar-matin-a86128193" target="_blank" rel="noopener noreferrer" id="footer-linkedin">LinkedIn</a>
+                </div>
+                <div class="copyright">
+                    Copyright &copy; 2026 Tajwar — Web Developer · Designer · Data Analyst.
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

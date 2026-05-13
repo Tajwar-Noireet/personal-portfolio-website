@@ -31,11 +31,23 @@ body {
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    cursor: none;
 }
 
-a, button, [role="button"] {
-    cursor: none;
+/* Hide the system cursor only on devices that actually have a fine pointer.
+   Touch devices keep their native cursor; the custom cursor is hidden there too. */
+@media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button, [role="button"] { cursor: none; }
+}
+
+@media not all and (hover: hover) and (pointer: fine) {
+    .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* Respect reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-up { opacity: 1; transform: none; }
 }
 
 a {

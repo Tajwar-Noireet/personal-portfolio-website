@@ -1,6 +1,9 @@
 // ── GSAP Setup ──────────────────────────────────────────────
 gsap.registerPlugin(ScrollTrigger);
 
+const prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ── Canvas Setup ─────────────────────────────────────────────
 const canvas  = document.getElementById('avatar-canvas');
 const context = canvas.getContext('2d');
@@ -124,6 +127,15 @@ function render() {
 
 // ── GSAP Scroll Animation ─────────────────────────────────────
 function initScrollAnimation() {
+    // Reduced-motion users skip the pinned scrub + role cycling. The first
+    // frame stays rendered, role-0 stays visible, .fade-up cards are flattened
+    // to their final state via CSS.
+    if (prefersReducedMotion) {
+        render();
+        window.addEventListener('resize', () => { resizeCanvas(); });
+        return;
+    }
+
     // 1. Pin the hero section and scrub through ALL frames while it's pinned
     //    The page scrolls `scrollLength` extra pixels while the canvas animates.
     const scrollLength = window.innerHeight * 2.5; // ~2.5 screen heights of scroll = full animation

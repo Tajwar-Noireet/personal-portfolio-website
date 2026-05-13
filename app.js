@@ -50,9 +50,10 @@ const firstImg = new Image();
 firstImg.src = framePath(FIRST_INDEX);
 images[FIRST_INDEX] = firstImg;
 
-firstImg.onload = () => {
-    loadedCount++;
-    updatePreloader();
+let booted = false;
+function boot() {
+    if (booted) return;
+    booted = true;
     resizeCanvas();
     window.addEventListener('resize', debounce(resizeCanvas, 150));
     // Hide roles 1 & 2 immediately so they don't flash before animation
@@ -61,11 +62,18 @@ firstImg.onload = () => {
     preloadRest();
     // Init scroll animation (canvas will render as frames arrive)
     initScrollAnimation();
+}
+
+firstImg.onload = () => {
+    loadedCount++;
+    updatePreloader();
+    boot();
 };
 
 firstImg.onerror = () => {
     loadedCount++;
     updatePreloader();
+    boot();
 };
 
 function preloadRest() {

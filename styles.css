@@ -44,12 +44,6 @@ body {
     .cursor-dot, .cursor-ring { display: none; }
 }
 
-/* Respect reduced-motion preference. The `.fade-up` override lives
-   next to its base rule below so it actually wins by source order. */
-@media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -789,10 +783,6 @@ body.cursor-hover .cursor-ring {
 .fade-up {
     opacity: 0;
     transform: translateY(32px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .fade-up { opacity: 1; transform: none; }
 }
 
 /* ── Responsive ─────────────────────────────────── */
